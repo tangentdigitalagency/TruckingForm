@@ -66,7 +66,7 @@ function LandingPage(props) {
 											</Col>
 											<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
 												<div className='block-right-hero'>
-													<img src={heroImg} alt='heroTruck' className='image-109' sizes='(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 1279px) 45vw, 570px' />
+													<img src={heroTruck} alt='heroTruck' className='image-109' sizes='(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 1279px) 45vw, 570px' />
 												</div>
 											</Col>
 										</Row>
