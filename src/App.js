@@ -31,10 +31,8 @@ class App extends Component {
 			//extra entries
 			lp_campaign_id: '5fe10f48a0ba0',
 			lp_campaign_key: 'vfB6nWKXFx9L3jPyZc7t',
-			Key: 'rRkWg9.WrP.Ahm.Ic9hNr9kZruQMcRpNruwIc9tVxVpWrV4MgexMl8QKHpEE',
-			TYPE: '38',
-			Sub_ID: '12',
-			Pub_ID: '13',
+			lp_s1: '12',
+			lp_s2: '13',
 			gclid: '',
 			TCPA_Consent: 'Yes',
 			TCPA_Language:
@@ -42,9 +40,8 @@ class App extends Component {
 			trusted_form_cert_id: '',
 			jornaya_lead_id: '',
 			// Redirect_URL: "",
-			SRC: 'Internal_Business_Insurance',
-			Landing_Page: 'quantumassurance.com',
-			IP_Address: '',
+			landing_page: 'quantumassurance.com',
+			ip_address: '',
 			//s1 form fields
 			first_name: '',
 			last_name: '',
@@ -73,6 +70,8 @@ class App extends Component {
 		},
 	};
 
+	
+
 	copyValuesToPostData2 = () => {
 		var tempArray = {
 			email: this.state.postData.email_address,
@@ -94,8 +93,23 @@ class App extends Component {
 		return this.state.postData2;
 	};
 	componentDidMount() {
+
+		var str = window.location.href
+		if (str.includes('utm_medium=facebook'))
+		  this.setState({ lp_s1: 103 }, () => {
+			//console.log(this.state.Pub_ID)
+		  })
+		if (str.includes('utm_medium=adwords'))
+		  this.setState({ Pub_ID: 101 }, () => {
+			//console.log(this.state.Pub_ID)
+		  })
+		  if (str.includes('utm_medium=bing'))
+		  this.setState({ Pub_ID: 108 }, () => {
+			//console.log(this.state.Pub_ID)
+		  })
+
 		if (this.state.first_name === '' || this.state.last_name === '') {
-			this.props.history.push('/calculate');
+			this.props.history.push('/step1');
 		}
 		if (window.location.pathname !== '/') {
 			this.setState({ route: '' });
@@ -109,6 +123,8 @@ class App extends Component {
 			}
 		});
 	}
+
+
 	componentDidUpdate = () => {};
 
 	UNSAFE_componentWillUpdate = () => {
