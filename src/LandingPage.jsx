@@ -5,6 +5,7 @@ import progressive from './Assets/img/progressive.png';
 import travelers from './Assets/img/travelers.png';
 import stateAuto from './Assets/img/state-auto.png';
 import heroImg from './Assets/img/newHero.jpg';
+import heroTruck from './Assets/img/heroTruck.jpg'
 import connectImg from './Assets/img/connection.png';
 import whatImg from './Assets/img/car.jpeg';
 import quote from './Assets/img/quote.png';
@@ -47,10 +48,10 @@ function LandingPage(props) {
 									<div className='block-left-hero'>
 										<Row>
 											<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-												<h1 className='hero_heading'>Better Coverage with Quotehound. Get a free Commercial Insurance Quote</h1>
+												<h1 className='hero_heading'>Better Coverage with USA Trucking. Get a free Trucking Insurance Quote
+</h1>
 												<p className='text-white para-white'>
-													A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with Quotehound today
-													and see if your business qualifies for Business Owners Policy.{' '}
+												A Commercial Trucking policy includes protection for all major property and liability risk in one package. Offers protection to business owners with assets such as Semi Trucks, Tractor Trailers, 18 Wheelers, and Fleet Trucks. Get a free quote with Quantum today and see if your business qualifies for Business Owners Policy.{' '}
 												</p>
 												<Button
 													onClick={() => {
@@ -65,7 +66,7 @@ function LandingPage(props) {
 											</Col>
 											<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
 												<div className='block-right-hero'>
-													<img src={heroImg} alt='heroImage' className='image-109' sizes='(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 1279px) 45vw, 570px' />
+													<img src={heroImg} alt='heroTruck' className='image-109' sizes='(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 1279px) 45vw, 570px' />
 												</div>
 											</Col>
 										</Row>
@@ -120,7 +121,7 @@ function LandingPage(props) {
 									These policies are better suited for smaller businesses as they have more personal financial exposure in the event of a loss. As a business owner, you must ensure that all aspects of your business are covered. From property damage to legal liabilities to
 									employee-related risk.
 								</p>
-								<p>At Quotehound, we offer the best coverage available for your business. Get your free quote today and check out what would be the best fit for your business.</p>
+								<p>At USA Trucking Quotes, we offer the best coverage available for your business. Get your free quote today and check out what would be the best fit for your business.</p>
 								<Button
 													onClick={() => {
 														props.changeRoute();
@@ -147,17 +148,21 @@ function LandingPage(props) {
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<ul>
 									<li className='list-item-2'>
-										<h6 className='h6-heading list'>Need general liability insurance coverage</h6>
+										<h6 className='h6-heading list'>You have Semi or 18 Wheelers
+
+</h6>
 									</li>
 									<li className='list-item-2'>
-										<h6 className='h6-heading list'>If you have business equipment that you want to make sure is protected</h6>
+										<h6 className='h6-heading list'>Have a small or large fleet of trucks and need Owner Operator coverage.</h6>
 									</li>
 								</ul>
 							</Col>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<ul>
 									<li className='list-item-2'>
-										<h6 className='h6-heading list'>If you happen to own the building that you work at </h6>
+										<h6 className='h6-heading list'>Big Rigs for commercial use.
+
+</h6>
 									</li>
 									<li className='list-item-2'>
 										<h6 className='h6-heading list'>If you have employees that you don’t consider to be trustworthy</h6>
