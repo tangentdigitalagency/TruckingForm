@@ -31,8 +31,8 @@ class App extends Component {
 			//extra entries
 			lp_campaign_id: '5fe10f48a0ba0',
 			lp_campaign_key: 'vfB6nWKXFx9L3jPyZc7t',
-			lp_s1: '12',
-			lp_s2: '13',
+			lp_s1: '',
+			lp_s2: '',
 			gclid: '',
 			TCPA_Consent: 'Yes',
 			TCPA_Language:
@@ -94,19 +94,33 @@ class App extends Component {
 	};
 	componentDidMount() {
 
-		var str = window.location.href
+		var str = window.location.href;
+
 		if (str.includes('utm_medium=facebook'))
-		  this.setState({ lp_s1: 103 }, () => {
-			//console.log(this.state.Pub_ID)
-		  })
-		if (str.includes('utm_medium=adwords'))
-		  this.setState({ Pub_ID: 101 }, () => {
-			//console.log(this.state.Pub_ID)
-		  })
-		  if (str.includes('utm_medium=bing'))
-		  this.setState({ Pub_ID: 108 }, () => {
-			//console.log(this.state.Pub_ID)
-		  })
+			this.setState({
+				postData: {
+					lp_s1: 103,
+					lp_s2: 103
+
+				}
+			})
+
+		if  (str.includes('utm_medium=adwords'))
+			this.setState({
+				postData: {
+					
+					lp_s1: 101,
+					lp_s2: 101
+				}
+			})
+
+		if (str.includes('/'))
+			this.setState({ 
+				postData: {
+					lp_s1: 13,
+					lp_s2: 13
+				}
+			})
 
 		if (this.state.first_name === '' || this.state.last_name === '') {
 			this.props.history.push('/step1');
@@ -153,7 +167,7 @@ class App extends Component {
 					<div className='container'>
 						<img
 							// @ts-ignore
-							src={require('./Assets/logo.png')}
+							src={require('./Assets/trucklogo.png')}
 							className='m-4'
 							width='200px'
 							alt=''
@@ -439,7 +453,7 @@ class App extends Component {
 					</Grid>
 					<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
 						<Grid item lg={3} xs={12} style={{ alignSelf: 'flex-end' }}>
-							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 Quotehound</Typography>
+							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 USA Trucking</Typography>
 						</Grid>
 						<Grid item lg={6} xs={false} />
 						<Grid container lg={3} xs={12}>

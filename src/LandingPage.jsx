@@ -5,7 +5,8 @@ import progressive from './Assets/img/progressive.png';
 import travelers from './Assets/img/travelers.png';
 import stateAuto from './Assets/img/state-auto.png';
 import heroImg from './Assets/img/newHero.jpg';
-import heroTruck from './Assets/img/heroTruck.jpg'
+import heroTruck from './Assets/img/heroTruck.jpg';
+import trucklogo from './Assets/trucklogo.png';
 import connectImg from './Assets/img/connection.png';
 import whatImg from './Assets/img/car.jpeg';
 import quote from './Assets/img/quote.png';
@@ -31,8 +32,8 @@ function LandingPage(props) {
 				<Header>
 					<Row>
 						<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-							<a href='https://assets.website-files.com/5dfd95f78d0e1ee3b32e0f58/5dfd965f8d0e1e23372e0fad_Quotehound%2520Primary%2520Logo%2520-%2520transparent%2520rasterized%2520(1)-p-500.png'>
-								<img src={logo} width='181' alt='logo' />
+							<a href='#'>
+								<img src={trucklogo} width='181' alt='logo' />
 							</a>
 						</Col>
 						<Col xs={{ span: 24 }} lg={{ span: 12 }} className='text-right'>
@@ -114,7 +115,7 @@ function LandingPage(props) {
 						<Row>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<p>
-									A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with Quotehound Assurance today and see
+									A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with USA Trucking Assurance today and see
 									if your business qualifies for Business Owners Policy.{' '}
 								</p>
 								<p>
@@ -193,7 +194,7 @@ function LandingPage(props) {
 										<h1>Why Us?</h1>
 										<p>
 											Receiving a quote from an agent, company, or website can feel like a long process. But don’t let that push you into settling for the first quote you receive. Instead, you’re likely to find a much better deal if you’re willing to shop around. This is where
-											Quotehound comes in.
+											USA Trucking comes in.
 										</p>
 										<Row className='mt-1 '>
 											<Col span={24}>
@@ -246,7 +247,7 @@ function LandingPage(props) {
 								<h1>What you need to know when choosing an insurer</h1>
 								<p>Nobody enjoys dealing with things they don’t understand—especially when they have to pay for it</p>
 								<p>For example, can you imagine putting yourself into debt just for the privilege of learning a bunch of facts and figures that you’ll probably never use again?</p>
-								<p>Thankfully, Quotehound has you covered when it comes to understanding car insurance.</p>
+								<p>Thankfully, USA Trucking has you covered when it comes to understanding car insurance.</p>
 								<Row className='mt-1 '>
 									<Col span={24}>
 									<Button
@@ -311,7 +312,7 @@ function LandingPage(props) {
 										<div className='container text-left'>
 											<p>
 												Receiving a quote from an agent, company, or website can feel like a long process. But don’t let that push you into settling for the first quote you receive. Instead, you’re likely to find a much better deal if you’re willing to shop around. Here’s the
-												great news: Quotehound can help you save time and effort in two ways when it comes to comparing car-insurance companies and quotes.
+												great news: USA Trucking can help you save time and effort in two ways when it comes to comparing car-insurance companies and quotes.
 											</p>
 											<br />
 											<p>First, offers a quick and simple way to review and compare auto-insurance d</p>
@@ -360,8 +361,8 @@ function LandingPage(props) {
 								<img src={quote} alt='quote' width='21' className='quote' />
 								<p className='quote-text-v1'>
 									<em className='font-italic italic-text-4'>
-										“I have never had such a great experience getting insurance quotes than I had using Quotehound. &nbsp;Their form is super quick and simple. &nbsp;As soon as I hit submit, they matched me with a great insurance agent named Sandy. &nbsp;I had all the information
-										and quotes I had to make the decision to switch my insurance. &nbsp;Thank you Quotehound for the great connection! ”<br />
+										“I have never had such a great experience getting insurance quotes than I had using USA Trucking. &nbsp;Their form is super quick and simple. &nbsp;As soon as I hit submit, they matched me with a great insurance agent named Sandy. &nbsp;I had all the information
+										and quotes I had to make the decision to switch my insurance. &nbsp;Thank you USA Trucking for the great connection! ”<br />
 									</em>
 								</p>
 								<p>Matthew</p>
@@ -401,7 +402,7 @@ function LandingPage(props) {
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Quick and reliable</p>
 											</Col>
 											<Col xs={{ span: 24 }}>
-												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Quotehound gives you tips!</p>
+												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>USA Trucking gives you tips!</p>
 											</Col>
 											<Col xs={{ span: 24 }}>
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Secure and safe</p>
@@ -459,7 +460,7 @@ function LandingPage(props) {
 				<Footer className='footer'>
 					<div className='footer-container'>
 						<div className='footer-top-wrap-2'>
-							<h1 className='heading-16'>Quotehound</h1>
+							<h1 className='heading-16'>USA Trucking</h1>
 						</div>
 						<div className='div-block-58'></div>
 					</div>
