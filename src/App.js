@@ -40,7 +40,7 @@ class App extends Component {
 			trusted_form_cert_id: '',
 			jornaya_lead_id: '',
 			// Redirect_URL: "",
-			landing_page: 'quantumassurance.com',
+			landing_page: 'usatruckingquotes.com',
 			ip_address: '',
 			//s1 form fields
 			first_name: '',
@@ -104,6 +104,14 @@ class App extends Component {
 
 				}
 			})
+		
+			if(str.includes('utm_medium=bing'))
+				this.setState({
+					postData: {
+						lp_s1: 108,
+						lp_s2: 108
+					}
+				})
 
 		if  (str.includes('utm_medium=adwords'))
 			this.setState({
@@ -200,13 +208,13 @@ class App extends Component {
 										first_name={this.state.postData.first_name}
 										last_name={this.state.postData.last_name}
 										setFirstName={(v) => {
-											console.log(document.getElementById('jornaya_lead_id').value);
+											console.log(document.getElementById('leadid_token').value);
 											console.log(document.getElementsByTagName('script')[0].src);
 											this.setState({
 												postData: {
 													...this.state.postData,
 													gclid: document.getElementById('gclid_field').value,
-													jornaya_lead_id: document.getElementById('jornaya_lead_id').value,
+													jornaya_lead_id: document.getElementById('leadid_token').value,
 													trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value,
 												},
 											});
