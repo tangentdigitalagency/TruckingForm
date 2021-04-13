@@ -26,13 +26,13 @@ import LandingPage from './LandingPage';
 class App extends Component {
 	state = {
 		route: '/',
-		routes: ['/step1', '/step2', '/step3', '/step4', '/step5', '/step6', '/step7', '/step8', '/thank-you'],
+		routes: ['/step1', '/step2', '/step3', '/step4', '/step5', '/step6', '/step7', '/step8', '/thank-you-trucking'],
 		postData: {
 			//extra entries
 			lp_campaign_id: '5fe10f48a0ba0',
 			lp_campaign_key: 'vfB6nWKXFx9L3jPyZc7t',
 			lp_s1: '',
-			lp_s2: '',
+			lp_s2: '13',
 			gclid: '',
 			TCPA_Consent: 'Yes',
 			TCPA_Language:
@@ -67,6 +67,7 @@ class App extends Component {
 			// s8 form fields
 			annual_revenue_over_next_12_months: '',
 			number_of_employees: '',
+			useragent: navigator.userAgent,
 		},
 	};
 
@@ -94,41 +95,53 @@ class App extends Component {
 	};
 	componentDidMount() {
 
-		var str = window.location.href;
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
 
-		if (str.includes('utm_medium=facebook'))
+		const utmCampaign = urlParams.get('utm_campaign');
+		this.setState({
+			postData: {
+				...this.state.postData,
+				campaign: utmCampaign
+			}
+			
+		})
+
+		const utmMed = urlParams.get('utm_medium');
+
+		if (utmMed == 'adwords'){
 			this.setState({
 				postData: {
-					lp_s1: 103,
-					lp_s2: 103
-
-				}
-			})
-		
-			if(str.includes('utm_medium=bing'))
-				this.setState({
-					postData: {
-						lp_s1: 108,
-						lp_s2: 108
-					}
-				})
-
-		if  (str.includes('utm_medium=adwords'))
+					...this.state.postData,
+					lp_s1: '101'
+				},
+			});
+		}
+		if (utmMed == 'facebook'){
 			this.setState({
 				postData: {
-					
-					lp_s1: 101,
-					lp_s2: 101
-				}
-			})
-
-		if (str.includes('/'))
-			this.setState({ 
+					...this.state.postData,
+					lp_s1: '103'
+				},
+			});
+		}
+		if (utmMed == 'bing'){
+			this.setState({
 				postData: {
-					lp_s1: 13,
-					lp_s2: 13
-				}
-			})
+					...this.state.postData,
+					lp_s1: '108'
+				},
+			});
+		}
+		else{
+			this.setState({
+				postData: {
+					...this.state.postData,
+					lp_s1: '12'
+				},
+			});
+		}
+
 
 		if (this.state.first_name === '' || this.state.last_name === '') {
 			this.props.history.push('/step1');
@@ -394,7 +407,7 @@ class App extends Component {
 										postData={this.state.postData}
 									/>
 								</Route>
-								<Route path='/thank-you'>
+								<Route path='/thank-you-trucking'>
 									<S9Final postData2={this.state.postData} />
 								</Route>
 							</Switch>
