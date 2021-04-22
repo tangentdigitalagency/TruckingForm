@@ -1,13 +1,19 @@
-import { Button, Card, Col, Collapse, Layout, Row } from 'antd';
+import { Button, Card, Col, Collapse, Layout, Row, Typography } from 'antd';
+import Grid from '@material-ui/core/Grid';
 import logo from './Assets/logo.png';
 import farmers from './Assets/img/farmers.png';
 import progressive from './Assets/img/progressive.png';
 import travelers from './Assets/img/travelers.png';
 import stateAuto from './Assets/img/state-auto.png';
 import heroImg from './Assets/img/newHero.jpg';
+import TruckDriver from './Assets/img/Truck Driver-1.jpg';
 import heroTruck from './Assets/img/heroTruck.jpg';
 import trucklogo from './Assets/trucklogo.png';
 import connectImg from './Assets/img/connection.png';
+import CNA from './Assets/cna.png';
+import LM from './Assets/lm.png';
+import prog from './Assets/prog.png';
+import SA from './Assets/sa.png';
 import whatImg from './Assets/img/car.jpeg';
 import quote from './Assets/img/quote.png';
 import canvas from './Assets/img/canvas.png';
@@ -62,7 +68,7 @@ function LandingPage(props) {
 													type='block '
 													size='large'
 													className='btn-large text-blue'>
-													Free Commercial Quote <ArrowRightOutlined />
+													Start Your Free Quote<ArrowRightOutlined />
 												</Button>
 											</Col>
 											<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
@@ -89,18 +95,18 @@ function LandingPage(props) {
 							<div className='section-two-img-container'>
 								<Row>
 									<Col xs={{ span: 24 }} lg={{ span: 12 }} className='px-md-4 py-3 '>
-										<img src={travelers} alt='logo1' />
+										<img src={CNA} alt='logo1' className="logoimg"/>
 									</Col>
 									<Col xs={{ span: 24 }} lg={{ span: 9, offset: 3 }} className='px-md-4 py-3 '>
-										<img src={progressive} alt='logo1' className='ml-1' />
+										<img src={LM} alt='logo1' className="logoimg" />
 									</Col>
 								</Row>
 								<Row>
 									<Col xs={{ span: 24 }} lg={{ span: 12 }} className='px-md-4 py-3 '>
-										<img src={stateAuto} alt='logo1' />
+										<img src={SA} alt='logo1' className="logoimg" />
 									</Col>
 									<Col xs={{ span: 24 }} lg={{ span: 10, offset: 2 }} className='px-md-4 py-3 '>
-										<img src={farmers} alt='logo1' />
+										<img src={prog} alt='logo1'  className="logoimg"/>
 									</Col>
 								</Row>
 							</div>
@@ -115,14 +121,15 @@ function LandingPage(props) {
 						<Row>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<p>
-									A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with USA Trucking Assurance today and see
-									if your business qualifies for Business Owners Policy.{' '}
+								A Commercial Trucking policy includes protection for all major property and liability risk in one package. 
+Offers protection to business owners with assets such as Semi Trucks, Car Haulers, Tankers, trailers, even large fleets of trucks. {' '}
 								</p>
-								<p>
-									These policies are better suited for smaller businesses as they have more personal financial exposure in the event of a loss. As a business owner, you must ensure that all aspects of your business are covered. From property damage to legal liabilities to
-									employee-related risk.
+								<p>Get a free quote today and see what discounts your business can qualify for. <br/>A truck insurance policy personalized for your needs helps reduce your financial exposure in the event of a loss. 
+As a business owner, you must ensure that all aspects of your business are covered. 
+From property damage to legal liabilities to employee-related risk. 
 								</p>
-								<p>At USA Trucking Quotes, we offer the best coverage available for your business. Get your free quote today and check out what would be the best fit for your business.</p>
+								<p>We offer the best coverage available for your business. <br/>
+Get your free personalized quote today.</p>
 								<Button
 													onClick={() => {
 														props.changeRoute();
@@ -131,7 +138,7 @@ function LandingPage(props) {
 													type='block '
 													size='large'
 													className='btn-large text-blue'>
-													Free Commercial Quote <ArrowRightOutlined />
+													Start Your Free Quote <ArrowRightOutlined />
 												</Button>
 							</Col>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
@@ -181,7 +188,7 @@ function LandingPage(props) {
 													type='block '
 													size='large'
 													className='btn-large text-blue'>
-													Free Commercial Quote <ArrowRightOutlined />
+													Start Your Free Quote <ArrowRightOutlined />
 												</Button>
 							</Col>
 						</Row>
@@ -206,7 +213,7 @@ function LandingPage(props) {
 													type='block '
 													size='large'
 													className='btn-large text-blue'>
-													Free Commercial Quote <ArrowRightOutlined />
+													Start Your Free Quote <ArrowRightOutlined />
 												</Button>
 											</Col>
 										</Row>
@@ -258,7 +265,7 @@ function LandingPage(props) {
 													type='block '
 													size='large'
 													className='btn-large text-blue'>
-													Free Commercial Quote <ArrowRightOutlined />
+												Start Your Free Quote <ArrowRightOutlined />
 												</Button>
 									</Col>
 								</Row>
@@ -335,7 +342,7 @@ function LandingPage(props) {
 													type='block '
 													size='large'
 													className='btn-large text-blue'>
-													Free Commercial Quote <ArrowRightOutlined />
+													Start Your Free Quote <ArrowRightOutlined />
 												</Button>
 							</Col>
 						</Row>
@@ -347,7 +354,7 @@ function LandingPage(props) {
 							</Col>
 						</Row>
 						<Row className='mt-md-5'>
-							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
+							{/* <Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<img
 									src={whatImg}
 									width='723'
@@ -356,8 +363,8 @@ function LandingPage(props) {
 									alt=''
 									className='client-image-big w-100 rounded'
 								/>
-							</Col>
-							<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
+							</Col> */}
+							{/* <Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}> */}
 								<img src={quote} alt='quote' width='21' className='quote' />
 								<p className='quote-text-v1'>
 									<em className='font-italic italic-text-4'>
@@ -366,6 +373,7 @@ function LandingPage(props) {
 									</em>
 								</p>
 								<p>Matthew</p>
+								
 								<Row className='mt-1'>
 									<Col span={24}>
 									<Button
@@ -376,53 +384,32 @@ function LandingPage(props) {
 													type='block '
 													size='large'
 													className='btn-large text-blue'>
-													Free Commercial Quote <ArrowRightOutlined />
+												Start Your Free Quote <ArrowRightOutlined />
 												</Button>
 									</Col>
 								</Row>
-							</Col>
+							{/* </Col> */}
 						</Row>
 					</section>
-					<section className='section-connect mt-5 pb-5'>
+					<section className='container mt-md-5'>
 						<Row>
-							<Col xs={{ span: 24 }} lg={{ span: 9, offset: 3 }}>
-								<img
-									src={connectImg}
-									sizes='(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 43vw, (max-width: 1279px) 40vw, 515px'
-									srcSet='https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0d8c14f1c09_developer-4027337_960_720-p-500.png 500w, https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0d8c14f1c09_developer-4027337_960_720.png 788w'
-									alt=''
-								/>
-							</Col>
-							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-								<div className='container d-flex h-75'>
+							
+							<Col xs={{ span: 24 }}>
+								<div className='container d-flex h-75 '>
 									<div className='justify-content-center align-self-center'>
 										<h2 className='mx-auto text-center '>We connect you with live rates in less than 2 minutes</h2>
-										<Row className='mt-md-5'>
-											<Col xs={{ span: 24 }}>
+										<Row className='mb-5 mt-3 '>
+											<Col xs={{ span: 24 }} lg={{ span: 16, offset: 4 }} className='text-center'>
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Quick and reliable</p>
 											</Col>
-											<Col xs={{ span: 24 }}>
+											<Col xs={{ span: 24 }} lg={{ span: 16, offset: 4 }} className='text-center'>
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>USA Trucking gives you tips!</p>
 											</Col>
-											<Col xs={{ span: 24 }}>
+											<Col xs={{ span: 24 }} lg={{ span: 16, offset: 4 }} className='text-center'>
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Secure and safe</p>
 											</Col>
-											<Col xs={{ span: 24 }}>
+											<Col xs={{ span: 24 }} lg={{ span: 16, offset: 4 }} className='text-center'>
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>We work with top rated companies!</p>
-											</Col>
-										</Row>
-										<Row className='mt-4'>
-											<Col span={24}>
-											<Button
-													onClick={() => {
-														props.changeRoute();
-														history.push('/step1');
-													}}
-													type='block '
-													size='large'
-													className='btn-large text-blue'>
-													Free Commercial Quote <ArrowRightOutlined />
-												</Button>
 											</Col>
 										</Row>
 									</div>
@@ -434,7 +421,7 @@ function LandingPage(props) {
 						<div className='container'>
 							<Row className='py-5'>
 								<Col span={24}>
-									<h3 className='mx-auto text-center text-white'>
+									<h3 className='mx-auto text-center'>
 										Trusted by some of leading <br />
 										companies in the world
 									</h3>
@@ -442,16 +429,16 @@ function LandingPage(props) {
 							</Row>
 							<Row>
 								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs '>
-									<img src={travelers} alt='logo1' className='bg-white custom-rounded py-1' />
+									<img src={CNA} alt='logo1' className=' custom-rounded logoimg' />
 								</Col>
 								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs '>
-									<img src={progressive} alt='logo1' className='ml-1 bg-white custom-rounded py-2 px-2' />
+									<img src={LM} alt='logo1' className='custom-rounded logoimg' />
 								</Col>
 								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs mt-md-3'>
-									<img src={stateAuto} alt='logo1' className='bg-white custom-rounded py-2 px-1' />
+									<img src={SA} alt='logo1' className=' logoimg' />
 								</Col>
 								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs  mt-md-3'>
-									<img src={farmers} alt='logo1' className='bg-white custom-rounded py-2 px-1' />
+									<img src={prog} alt='logo1' className='logoimg' />
 								</Col>
 							</Row>
 						</div>
@@ -462,7 +449,58 @@ function LandingPage(props) {
 						<div className='footer-top-wrap-2'>
 							<h1 className='heading-16'>USA Trucking</h1>
 						</div>
-						<div className='div-block-58'></div>
+						<div className='div-block-58'>
+						<h3 className="h3">powered by Quotehound  </h3>
+
+						
+						<Grid container xs={12} align='center' style={{ justifyContent: 'center' }}>
+		
+					<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
+						<Grid container lg={5} xs={12}>
+							<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
+								<Typography
+									style={{
+										fontSize: '15px',
+										color: 'rgb(166, 166, 166)',
+										fontWeight: 600,
+									}}>
+									<a
+										href='https://quotehound.com/'
+										// @ts-ignore
+										style={{ color: 'rgb(166,166,166)', fontWeight: '400' }}>
+										Visit Us
+									</a>
+								</Typography>
+							</Grid>
+							<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
+								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
+									<a
+										href='https://quotehound.com/privacy-policy'
+										// @ts-ignore
+										style={{ color: 'rgb(166,166,166)', fontWeight: '400' }}>
+										Privacy Policy
+									</a>
+								</Typography>
+							</Grid>
+							<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
+								<Typography
+									style={{
+										fontSize: '15px',
+										color: 'rgb(166, 166, 166)',
+										fontWeight: 600,
+									}}>
+									<a
+										href='https://quotehound.com/terms-conditions'
+										// @ts-ignore
+										style={{ color: 'rgb(166,166,166)', fontWeight: '400' }}>
+										Terms & Conditions
+									</a>
+								</Typography>
+							</Grid>
+						</Grid>
+					</Grid>
+				</Grid>
+						</div>
 					</div>
 				</Footer>
 			</Layout>
