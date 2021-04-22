@@ -450,7 +450,7 @@ Get your free personalized quote today.</p>
 							<h1 className='heading-16'>USA Trucking</h1>
 						</div>
 						<div className='div-block-58'>
-						<h3 className="h3">powered by Quotehound  </h3>
+						<h3 className="h3">powered by Quotehound Inc 2021  </h3>
 
 						
 						<Grid container xs={12} align='center' style={{ justifyContent: 'center' }}>
